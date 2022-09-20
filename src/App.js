@@ -1,9 +1,9 @@
-import HeaderComponents from './components/Header/HeaderComponents'
+import Home from './components/Pages/Home'
 
 function App() {
   return (
     <div>
-      <HeaderComponents />
+      <Home />
     </div>
   )
 }
