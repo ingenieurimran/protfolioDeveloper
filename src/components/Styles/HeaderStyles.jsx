@@ -32,27 +32,11 @@ export const useStyles = makeStyles((theme) => ({
     lineHeight: '45px',
     position: 'absolute',
     left: '20px',
+    color: Theme.colors.base2,
   },
   arrow: {
     lineHeight: '45px',
     position: 'absolute',
     left: '100px',
-    animationName: 'upDown',
-    animationDuration: '1s',
-    animationIterationCount: 'infinite',
-  },
-
-  //   create animation
-  '@global': {
-    '@keyframes upDown': {
-      '0%': {
-        paddingTop: '0px',
-        transform: 'scale(0)',
-      },
-      '100%': {
-        paddingTop: '10px',
-        transform: 'scale(1)',
-      },
-    },
   },
 }))

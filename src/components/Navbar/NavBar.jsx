@@ -4,7 +4,7 @@ import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
-import {useStyles} from '../Header/HeaderStyles'
+import {useStyles} from '../Styles/HeaderStyles'
 import {Theme} from '../Theme'
 import {Hidden} from '@material-ui/core'
 import MenuOpenOutlinedIcon from '@mui/icons-material/MenuOpenOutlined'
@@ -27,7 +27,7 @@ export default function NavBar() {
   ]
   return (
     <Box sx={{flexGrow: 1}}>
-      <AppBar position="static" sx={{backgroundColor: Theme.colors.base1}}>
+      <AppBar position="fixed" sx={{backgroundColor: Theme.colors.base1}}>
         <Toolbar>
           <Typography variant="h5" component="h2" sx={{flexGrow: 1}}>
             {/* <Holder>News</Holder> */}
