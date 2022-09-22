@@ -1,7 +1,7 @@
 import {makeStyles} from '@material-ui/core'
 import {Theme} from '../Theme'
 // import Images from '../../../public/Images/c.png'
-import Images from '../assets/Images/a.jpg'
+import Images from '../../assets/Images/a.jpg'
 
 export const useStyles = makeStyles((theme) => ({
   HeaderWraper: {
@@ -37,6 +37,6 @@ export const useStyles = makeStyles((theme) => ({
   arrow: {
     lineHeight: '45px',
     position: 'absolute',
-    left: '100px',
+    left: '11rem',
   },
 }))

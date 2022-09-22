@@ -1,6 +1,5 @@
 import React from 'react'
 import Grid from '@mui/material/Grid'
-import Card from '@mui/material/Card'
 import Typography from '@mui/material/Typography'
 import {Box} from '@mui/material'
 import Avatar from '@mui/material/Avatar'
@@ -19,7 +18,7 @@ function CardAbout({itemName}) {
         >
           <Stack direction="row" spacing={2}>
             <Avatar sx={{bgcolor: Theme.colors.primary}}>
-              {itemName.imge}
+              {itemName.logo}
             </Avatar>
           </Stack>
           <Typography variant="subtitle1" component="p" marginLeft={2}>

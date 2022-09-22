@@ -12,5 +12,7 @@ export const useStyles = makeStyles((theme) => ({
   nameTitle: {
     paddingTop: '1rem',
   },
-  testColor: 'backgroundColor: Theme.colors.base1',
+  cardMedia: {
+    marginTop: '2rem',
+  },
 }))

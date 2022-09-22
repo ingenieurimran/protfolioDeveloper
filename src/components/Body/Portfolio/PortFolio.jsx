@@ -1,5 +1,6 @@
-import {Box, Container, Grid, Hidden, Typography} from '@material-ui/core'
 import React from 'react'
+import {Container, Grid, Hidden, Typography} from '@material-ui/core'
+import Box from '@mui/material/Box'
 import {useStyles} from '../../Styles/AboutStyles'
 import {useStyles as BodyStyles} from '../../Styles/HeaderStyles'
 import CardMedia from '@mui/material/CardMedia'
@@ -7,25 +8,14 @@ import {Theme} from '../../Theme'
 import Divider from '@mui/material/Divider'
 import CardAbout from '../../CommonFolder/CardAbout'
 import {cardMediaData} from '../../../dataJason'
-function AboutComponent() {
+function PortFolio() {
   const classes = useStyles()
   const classes1 = BodyStyles()
   return (
     <Box className={classes.aboutSction} sx={{display: 'flex'}}>
       <Container>
         <Grid container spacing={1}>
-          <Grid item sm={7}>
-            <Box component={Hidden} xsDown>
-              <CardMedia
-                component="img"
-                alt="about me"
-                width="100%"
-                height="auto"
-                image="https://feenproject.web.app/static/media/developer.f6dc5517.png"
-              />
-            </Box>
-          </Grid>
-          <Grid item xs={12} sm={5}>
+          <Grid item xs={12}>
             <Box className={classes1.decorator}>
               <Typography variant="span" className={classes1.decoratorText}>
                 About Me
@@ -43,7 +33,7 @@ function AboutComponent() {
                 backgroundColor: Theme.colors.primary,
               }}
             />
-            <Box sx={{paddingBottom: '5rem'}}>
+            {/* <Box sx={{paddingBottom: '5rem'}}>
               <Typography variant="h5" component="h6">
                 <span style={{color: '#66CC66'}}>Frantend Developer</span>,{' '}
                 <span style={{color: '#FF9966'}}>UX/UI Architect</span>, and{' '}
@@ -58,11 +48,12 @@ function AboutComponent() {
                 do!
               </Typography>
             </Box>
+
             <Grid container spacing={5} className={classes.cardMedia}>
               {cardMediaData.map((item, index) => (
                 <CardAbout itemName={item} key={index} />
               ))}
-            </Grid>
+            </Grid> */}
           </Grid>
         </Grid>
       </Container>
@@ -70,4 +61,4 @@ function AboutComponent() {
   )
 }
 
-export default AboutComponent
+export default PortFolio
