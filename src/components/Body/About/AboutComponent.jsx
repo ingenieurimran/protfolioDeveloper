@@ -7,6 +7,8 @@ import {Theme} from '../../Theme'
 import Divider from '@mui/material/Divider'
 import CardAbout from '../../CommonFolder/CardAbout'
 import {cardMediaData} from '../../../dataJason'
+import Images from '../../../assets/Images/c.png'
+
 function AboutComponent() {
   const classes = useStyles()
   const classes1 = BodyStyles()
@@ -16,13 +18,15 @@ function AboutComponent() {
         <Grid container spacing={1}>
           <Grid item sm={7}>
             <Box component={Hidden} xsDown>
-              <CardMedia
+              {/* <CardMedia
                 component="img"
                 alt="about me"
                 width="100%"
                 height="auto"
                 image="https://feenproject.web.app/static/media/developer.f6dc5517.png"
-              />
+              /> */}
+              <img src={Images} style={{width: '100%', height: 'auto'}} />
+              {/* <img src="https://feenproject.web.app/static/media/developer.f6dc5517.png" /> */}
             </Box>
           </Grid>
           <Grid item xs={12} sm={5}>
