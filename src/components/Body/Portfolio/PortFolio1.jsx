@@ -1,9 +1,8 @@
 import React from 'react'
 import {Typography} from '@material-ui/core'
 import {Box} from '@mui/material'
-import {AnimationArrow, AnimationText} from '../CommonFolder/Animations'
-import {useStyles} from '../Styles/HeaderStyles'
-import ArrowDownwardOutlinedIcon from '@mui/icons-material/ArrowDownwardOutlined'
+
+import {useStyles} from '../../Styles/HeaderStyles'
 
 function HeaderComponents() {
   const classes = useStyles()
@@ -13,15 +12,11 @@ function HeaderComponents() {
       <Box sx={{paddingTop: '15rem', paddingLeft: '3rem'}}>
         <Typography variant="h3" component="h2">
           <Box sx={{display: 'flex'}}>
-            Hey I am a{' '}
-            <Box sx={{marginLeft: '1rem'}}>
-              <AnimationText>Webdeveloper</AnimationText>
-            </Box>
+            Hey I am a <Box sx={{marginLeft: '1rem'}}>Webdeveloper</Box>
           </Box>
         </Typography>
         <Box sx={{marginY: '1rem'}}>
           <Typography variant="h4" component="h2">
-            {/* I Create Website And Application, <br /> Based On Your Needs... */}
             truning ideas into real life{' '}
             <strong>
               <span style={{color: '#66CC66'}}>p</span>
@@ -40,11 +35,7 @@ function HeaderComponents() {
           <Typography variant="span" className={classes.decoratorText}>
             See More About Me
           </Typography>
-          <Typography variant="span" className={classes.arrow}>
-            <AnimationArrow>
-              <ArrowDownwardOutlinedIcon />
-            </AnimationArrow>
-          </Typography>
+          <Typography variant="span" className={classes.arrow}></Typography>
         </Box>
       </Box>
     </Box>
