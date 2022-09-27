@@ -1,12 +1,20 @@
 import React from 'react'
 import {Typography} from '@material-ui/core'
-import {Box, Container, Grid} from '@mui/material'
+import {
+  Box,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  Container,
+  Grid,
+} from '@mui/material'
 
 import {useStyles} from '../../Styles/HeaderStyles'
 import {useStyles as BodyStyles} from '../../Styles/HeaderStyles'
 import {Theme} from '../../Theme'
 import Divider from '@mui/material/Divider'
-import {cardMediaData} from '../../../dataJasonAbout'
+import {cardMediaData} from '../../../dataJason'
 import CardPortfolio from '../../CommonFolder/CardPortfolio'
 
 function AboutComponent() {
@@ -17,54 +25,35 @@ function AboutComponent() {
       sx={{
         backgroundColor: '#143438',
         paddingTop: '3rem',
-        paddingLeft: '3rem',
+        paddingLeft: '1rem',
         color: 'white',
       }}
     >
-      <Grid
-        container
-        style={{
-          displa: 'flex',
-          justifyContent: 'center',
-          alignContent: 'center',
-          width: '300px',
-          margin: '10px auto',
-        }}
-      >
-        <Grid item xs={12}>
-          <Box className={classes.decorator}>
-            <Typography variant="span" className={classes.decoratorText}>
-              PortFolio
-            </Typography>
-          </Box>
-          <Box className={classes1.nameTitle} sx={{marginLeft: '-100px'}}>
-            <Typography variant="h4">Let's See My Work</Typography>
-          </Box>
-          <Divider
-            sx={{
-              marginTop: '1.5rem',
-              marginBottom: '1.5rem',
-              borderBottomWidth: 6,
-              width: '4.5rem',
-              backgroundColor: Theme.colors.primary,
-            }}
-          />
-        </Grid>
-      </Grid>
       <Container maxWidth="xl">
         <Grid container spacing={2}>
           {cardMediaData.map((item, index) => (
-            <Grid item xs={6} sm={6} lg={4} key={index}>
-              <Box>
-                <img
-                  src={item.url}
-                  alt={item.titleBody}
-                  style={{width: '100%', height: 'auto'}}
-                />
+            <Grid item xs={6} sm={6} lg={4}>
+              <CardPortfolio itemName={item} key={index} />
+              {/* <Card>
                 <Box>
-                  <Typography>{item.title}</Typography>
+                  <img
+                    src={itemName.url}
+                    alt={itemName.titleBody}
+                    style={{width: '100%', height: 'auto'}}
+                  />
                 </Box>
-              </Box>
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {itemName.titleBody}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {itemName.discriptionBody}
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="small">Learn More</Button>
+                </CardActions>
+              </Card> */}
             </Grid>
           ))}
         </Grid>

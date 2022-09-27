@@ -10,7 +10,7 @@ function HeaderComponents() {
 
   return (
     <Box className={classes.HeaderWraper}>
-      <Box sx={{paddingTop: '15rem', paddingLeft: '3rem'}}>
+      <Box sx={{paddingTop: '15rem', paddingLeft: '1rem'}}>
         <Typography variant="h3" component="h2">
           <Box sx={{display: 'flex'}}>
             Hey I am a{' '}
