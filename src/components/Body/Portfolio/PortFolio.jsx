@@ -13,40 +13,119 @@ function AboutComponent() {
   const classes = useStyles()
   const classes1 = BodyStyles()
   return (
-    <Box className={classes.HeaderWraper}>
-      <Box sx={{paddingTop: '3rem', paddingLeft: '3rem'}}>
-        <Box className={classes.aboutSction} sx={{display: 'flex'}}>
-          <Container>
-            <Grid container spacing={1}>
-              <Grid item xs={12}>
-                <Box className={classes1.decorator}>
-                  <Typography variant="span" className={classes1.decoratorText}>
-                    PortFolio
+    <Box
+      sx={{
+        backgroundColor: '#143438',
+        paddingTop: '3rem',
+        paddingLeft: '3rem',
+        color: 'white',
+      }}
+    >
+      <Grid
+        container
+        style={{
+          displa: 'flex',
+          justifyContent: 'center',
+          alignContent: 'center',
+          width: '300px',
+          margin: '10px auto',
+        }}
+      >
+        <Grid item xs={12}>
+          <Box className={classes1.decorator}>
+            <Typography variant="span" className={classes1.decoratorText}>
+              PortFolio
+            </Typography>
+          </Box>
+          <Box className={classes.nameTitle}>
+            <Typography variant="h4">Let's See My Work</Typography>
+          </Box>
+          <Divider
+            sx={{
+              marginTop: '1.5rem',
+              marginBottom: '1.5rem',
+              borderBottomWidth: 6,
+              width: '4.5rem',
+              backgroundColor: Theme.colors.primary,
+            }}
+          />
+        </Grid>
+      </Grid>
+      <Container maxWidth="xl">
+        <Grid container spacing={2}>
+          {cardMediaData.map((item, i) => (
+            <Grid item xs={6} sm={6} lg={4} key={i}>
+              <Box className={classes1.imageContainer}>
+                <img
+                  src={item.url}
+                  alt={item.titleBody}
+                  className={classes1.responsiveImg}
+                  style={{width: '100%', height: 'auto'}}
+                />
+                <Box className={classes1.imageOverlay}>
+                  <Typography className={classes1.overlayTitle}>
+                    {item.title}
                   </Typography>
                 </Box>
-                <Box className={classes.nameTitle}>
-                  <Typography variant="h4">Let's See My Work</Typography>
-                </Box>
-                <Divider
-                  sx={{
-                    marginTop: '1.5rem',
-                    marginBottom: '1.5rem',
-                    borderBottomWidth: 6,
-                    width: '4.5rem',
-                    backgroundColor: Theme.colors.primary,
-                  }}
-                />
-              </Grid>
+              </Box>
             </Grid>
-          </Container>
-        </Box>
-        <Grid container spacing={5} className={classes.cardMedia}>
-          {cardMediaData.map((item, index) => (
-            <CardPortfolio itemName={item} key={index} />
           ))}
         </Grid>
-      </Box>
+      </Container>
     </Box>
+    // <Box className={classes.sectionDark} id="Portfolio">
+    //   <Grid
+    //     container
+    //     style={{
+    //       displa: 'flex',
+    //       justifyContent: 'center',
+    //       alignContent: 'center',
+    //     }}
+    //   >
+    //     <Grid item xs={12} sm={8}>
+    //       <Box className={classes1.decorator}>
+    //         <Typography variant="span" className={classes1.decoratorText}>
+    //           PortFolio
+    //         </Typography>
+    //       </Box>
+    //       <Box className={classes.nameTitle}>
+    //         <Typography variant="h4">Let's See My Work</Typography>
+    //       </Box>
+    //       <Divider
+    //         sx={{
+    //           marginTop: '1.5rem',
+    //           marginBottom: '1.5rem',
+    //           borderBottomWidth: 6,
+    //           width: '4.5rem',
+    //           backgroundColor: Theme.colors.primary,
+    //         }}
+    //       />
+    //     </Grid>
+    //   </Grid>
+    //   {/* imge section  */}
+
+    //   <Container maxWidth="xl">
+    //     <Grid container spacing={2}>
+    //       {cardMediaData.map((item, i) => (
+    //         <Grid item xs={6} sm={6} lg={4} key={i}>
+    //           <Box className={classes1.imageContainer}>
+    //             <img
+    //               src={item.url}
+    //               alt={item.title}
+    //               className={classes1.responsiveImg}
+    //               style={{width: '100%', height: 'auto'}}
+    //             />
+    //             <Box className={classes1.imageOverlay}>
+    //               <Typography className={classes1.overlayTitle}>
+    //                 {item.title}
+    //               </Typography>
+    //             </Box>
+    //           </Box>
+    //         </Grid>
+    //       ))}
+    //     </Grid>
+    //   </Container>
+    // </Box>
   )
 }
 
