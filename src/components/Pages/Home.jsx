@@ -1,6 +1,7 @@
 import React from 'react'
 import AboutComponent from '../Body/About/AboutComponent'
 import ContactComponent from '../Body/Contact/ContactComponent'
+import FormText from '../Body/Contact/FormTest'
 import PortFolio from '../Body/Portfolio/PortFolio'
 import FooterComponent from '../Footer/FooterComponent'
 import HeaderComponents from '../Header/HeaderComponents'
@@ -14,7 +15,8 @@ function Home() {
       <AboutComponent />
       <PortFolio />
       <ContactComponent />
-      <FooterComponent />
+      {/* <FooterComponent /> */}
+      {/* <FormText /> */}
     </div>
   )
 }
