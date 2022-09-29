@@ -12,7 +12,7 @@ import {Button} from '@mui/material'
 function ContactComponent() {
   const classes = useStyles()
   const classes1 = BodyStyles()
-  const [value, setValue] = React.useState('Controlled')
+  const [value, setValue] = React.useState()
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value)
@@ -131,10 +131,19 @@ function ContactComponent() {
                   rows={4}
                   // defaultValue="Default Value"
                 />
+                <Box>
+                  <Button
+                    style={{
+                      boxShadow: 'red',
+                      borderRadius: '50px',
+                      backgroundColor: '#0097a7',
+                    }}
+                    variant="contained"
+                  >
+                    SEND
+                  </Button>
+                </Box>
               </Grid>
-            </Box>
-            <Box marginX={'1rem'}>
-              <Button variant="contained">SEND</Button>
             </Box>
           </Grid>
         </Grid>

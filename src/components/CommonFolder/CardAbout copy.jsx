@@ -8,7 +8,7 @@ import {Theme} from '../Theme'
 
 function CardAbout({itemName}) {
   return (
-    <Grid item xs={12} sm={6}>
+    <Grid item xs={6}>
       <Box padding={1}>
         <Box
           sx={{

@@ -12,6 +12,27 @@ export const useStyles = makeStyles((theme) => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeate',
     color: Theme.colors.base2,
+    fontFamily: 'roboto',
+  },
+  HeaderReposivie: {
+    paddingTop: '15rem',
+    paddingLeft: '1rem',
+    [theme.breakpoints.down('xs')]: {
+      marginTop: '-5rem',
+    },
+  },
+  HeaderTitle: {
+    fontSize: '3rem',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.8rem',
+    },
+  },
+  headerDesc: {
+    fontSize: '2rem',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1rem',
+      margin: theme.spacing(2, 0),
+    },
   },
   //   decorator.
   decorator: {
@@ -29,10 +50,14 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   decoratorText: {
+    fontSize: '1rem',
     lineHeight: '45px',
     position: 'absolute',
     left: '20px',
     color: Theme.colors.base2,
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1rem',
+    },
   },
   arrow: {
     lineHeight: '45px',
