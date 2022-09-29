@@ -12,7 +12,7 @@ function AboutComponent() {
   const classesCommon = useStylesCommon()
   const classesPortfolio = useStylesPortfolio()
   return (
-    <Box className={classesPortfolio.sectionProtfolio}>
+    <Box className={classesPortfolio.sectionProtfolio} id="Portfolio">
       <Grid
         container
         style={{

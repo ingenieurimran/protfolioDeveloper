@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Typography} from '@material-ui/core'
 import {Box} from '@mui/material'
 import {AnimationArrow} from '../CommonFolder/Animations'
@@ -6,13 +6,32 @@ import {useStyles} from '../Styles/HeaderStyles'
 import ArrowDownwardOutlinedIcon from '@mui/icons-material/ArrowDownwardOutlined'
 import Typed from 'react-typed'
 import {useStylesCommon} from '../CommonFolder/CommonStyles'
+import NavBar from '../Navbar/NavBar'
+import DrawerComponent from './DrawerComponent'
 
 function HeaderComponents() {
   const classes = useStyles()
   const classesCommon = useStylesCommon()
 
+  const [initialState, setInitialState] = useState(false)
+  const handleDrawerToogler = () => {
+    setInitialState(!initialState)
+  }
+
+  const navlinks = [
+    {label: 'About', Id: 'About'},
+    {label: 'Portfolio', Id: 'Portfolio'},
+    {label: 'Contact', Id: 'Contact'},
+  ]
+
   return (
-    <Box className={classes.HeaderWraper}>
+    <Box className={classes.HeaderWraper} id="Headder">
+      <NavBar navlinks={navlinks} handleDrawerToogler={handleDrawerToogler} />
+      <DrawerComponent
+        initialState={initialState}
+        navlinks={navlinks}
+        handleDrawerToogler={handleDrawerToogler}
+      />
       <Box className={classes.HeaderReposivie}>
         <Typography variant="h3" component="h2" className={classes.HeaderTitle}>
           Hey I'm a <span></span>

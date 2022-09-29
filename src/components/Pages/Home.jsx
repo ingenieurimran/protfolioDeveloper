@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from '../Navbar/NavBar'
+// import NavBar from '../Navbar/NavBar'
 import HeaderComponents from '../Header/HeaderComponents'
 import AboutComponent from '../Body/About/AboutComponent'
 import PortFolio from '../Body/Portfolio/PortFolio'
@@ -9,7 +9,7 @@ import Footer from '../Footer/FooterComponents'
 function Home() {
   return (
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       <HeaderComponents />
       <AboutComponent />
       <PortFolio />
