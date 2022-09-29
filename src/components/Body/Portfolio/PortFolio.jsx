@@ -1,40 +1,40 @@
 import React from 'react'
 import {Typography} from '@material-ui/core'
 import {Box, Container, Grid} from '@mui/material'
-
-import {useStyles} from '../../Styles/HeaderStyles'
-import {useStyles as BodyStyles} from '../../Styles/AboutStyles'
 import {Theme} from '../../Theme'
 import Divider from '@mui/material/Divider'
 import {cardMediaDataPort} from '../../../dataJasonPortFolio'
 import CardPortfolio from '../../CommonFolder/CardPortfolio'
+import {useStylesCommon} from '../../CommonFolder/CommonStyles'
+import {useStylesPortfolio} from '../../Styles/PortfolioStyle'
 
 function AboutComponent() {
-  const classes = useStyles()
-  const classes1 = BodyStyles()
+  const classesCommon = useStylesCommon()
+  const classesPortfolio = useStylesPortfolio()
   return (
-    <Box className={classes1.sectionProtfolio}>
+    <Box className={classesPortfolio.sectionProtfolio}>
       <Grid
         container
         style={{
           displa: 'flex',
           justifyContent: 'center',
           alignContent: 'center',
-          // width: '300px',
-          // margin: '10px auto',
         }}
       >
         <Grid item xs={12} sm={12}>
           <Box display="flex" justifyContent="center" alignItems="center">
-            <Box className={classes.decorator}>
-              <Typography variant="span" className={classes.decoratorText}>
+            <Box className={classesCommon.decorator}>
+              <Typography
+                variant="span"
+                className={classesCommon.decoratorText}
+              >
                 PortFolio
               </Typography>
             </Box>
           </Box>
           <Box display="flex" justifyContent="center" alignItems="center">
             <Box>
-              <Typography variant="h4" className={classes1.aboutTitle}>
+              <Typography variant="h4" className={classesCommon.SectionTitle}>
                 Let's See My Work
               </Typography>
             </Box>

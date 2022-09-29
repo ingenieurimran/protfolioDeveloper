@@ -1,5 +1,5 @@
-import {Container, Grid, Hidden, Typography} from '@material-ui/core'
 import React from 'react'
+import {Container, Grid, Hidden, Typography} from '@material-ui/core'
 import {useStyles} from '../../Styles/AboutStyles'
 import {useStyles as BodyStyles} from '../../Styles/HeaderStyles'
 import {Theme} from '../../Theme'
@@ -8,10 +8,13 @@ import Images from '../../../assets/Images/contact.png'
 import Box from '@mui/material/Box'
 import TextField from '@mui/material/TextField'
 import {Button} from '@mui/material'
+import {useStylesCommon} from '../../CommonFolder/CommonStyles'
 
 function ContactComponent() {
   const classes = useStyles()
   const classes1 = BodyStyles()
+  const classesCommon = useStylesCommon()
+
   const [value, setValue] = React.useState()
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -19,34 +22,45 @@ function ContactComponent() {
   }
 
   return (
-    <Box className={classes.aboutSction} sx={{display: 'flex'}}>
+    <Box className={classes.aboutSction} sx={{display: 'flex'}} id="Contact">
       <Container>
         <Grid container spacing={1}>
-          <Grid item sm={7}>
+          <Grid item sm={5}>
             <Box component={Hidden} xsDown>
-              <img src={Images} style={{width: '100%', height: 'auto'}} />
+              <img
+                src={Images}
+                alt="img"
+                style={{width: '100%', height: 'auto'}}
+              />
             </Box>
           </Grid>
-          <Grid item xs={12} sm={5}>
-            <Box className={classes1.decorator}>
-              <Typography variant="span" className={classes1.decoratorText}>
+          <Grid item xs={12} sm={7}>
+            <Box className={classesCommon.decorator}>
+              <Typography
+                variant="span"
+                className={classesCommon.decoratorText}
+              >
                 Contact Me
               </Typography>
             </Box>
-            <Box className={classes.nameTitle}>
-              <Typography variant="h4">Seems To be Interesting</Typography>
+            <Box>
+              <Typography variant="h4" className={classesCommon.SectionTitle}>
+                Seems To be Interesting
+              </Typography>
             </Box>
-            <Divider
-              sx={{
-                marginTop: '1.5rem',
-                marginBottom: '1.5rem',
-                borderBottomWidth: 6,
-                width: '4.5rem',
-                backgroundColor: Theme.colors.primary,
-              }}
-            />
-            <Box sx={{paddingBottom: '5rem'}}>
-              <Typography variant="h5" component="h6">
+            <Box className={classesCommon.dividerLine}>
+              <Divider
+                sx={{
+                  borderBottomWidth: 6,
+                }}
+              />
+            </Box>
+            <Box sx={{paddingBottom: '1rem'}}>
+              <Typography
+                variant="h5"
+                component="h6"
+                className={classesCommon.SectionDescription}
+              >
                 Got my Portfolio seen , than feel free to contact me for your
                 future projects
               </Typography>
@@ -55,8 +69,6 @@ function ContactComponent() {
             <Box
               component="form"
               sx={{
-                marginTop: '-3rem',
-                marginLeft: '-8rem',
                 '& .MuiTextField-root': {
                   m: 1,
                   width: '45ch',
@@ -89,60 +101,62 @@ function ContactComponent() {
                 justifyContent="center"
                 alignItems="center"
               >
-                <TextField
-                  inputProps={{
-                    style: {
-                      fontSize: '20px',
-                      fontFamily: 'roboto',
-                      color: 'white',
-                    },
-                  }}
-                  id="outlined-multiline-flexible"
-                  label="Name"
-                  multiline
-                  maxRows={4}
-                  value={value}
-                  onChange={handleChange}
-                />
-                <TextField
-                  inputProps={{
-                    style: {
-                      fontSize: '20px',
-                      fontFamily: 'roboto',
-                      color: 'white',
-                    },
-                  }}
-                  id="outlined-textarea"
-                  label="Email"
-                  // placeholder="Email"
-                  multiline
-                />
-                <TextField
-                  inputProps={{
-                    style: {
-                      fontSize: '20px',
-                      fontFamily: 'roboto',
-                      color: 'white',
-                    },
-                  }}
-                  id="outlined-multiline-static"
-                  label="Messages"
-                  multiline
-                  rows={4}
-                  // defaultValue="Default Value"
-                />
-                <Box>
-                  <Button
-                    style={{
-                      boxShadow: 'red',
-                      borderRadius: '50px',
-                      backgroundColor: '#0097a7',
+                <Grid item xs={12} sm={10}>
+                  <TextField
+                    inputProps={{
+                      style: {
+                        fontSize: '20px',
+                        fontFamily: 'roboto',
+                        color: 'white',
+                      },
                     }}
-                    variant="contained"
-                  >
-                    SEND
-                  </Button>
-                </Box>
+                    id="outlined-multiline-flexible"
+                    label="Name"
+                    multiline
+                    maxRows={4}
+                    value={value}
+                    onChange={handleChange}
+                  />
+                  <TextField
+                    inputProps={{
+                      style: {
+                        fontSize: '20px',
+                        fontFamily: 'roboto',
+                        color: 'white',
+                      },
+                    }}
+                    id="outlined-textarea"
+                    label="Email"
+                    // placeholder="Email"
+                    multiline
+                  />
+                  <TextField
+                    inputProps={{
+                      style: {
+                        fontSize: '20px',
+                        fontFamily: 'roboto',
+                        color: 'white',
+                      },
+                    }}
+                    id="outlined-multiline-static"
+                    label="Messages"
+                    multiline
+                    rows={4}
+                    // defaultValue="Default Value"
+                  />
+                  <Box>
+                    <Button
+                      style={{
+                        boxShadow: 'red',
+                        borderRadius: '50px',
+                        backgroundColor: '#0097a7',
+                      }}
+                      variant="contained"
+                    >
+                      SEND
+                    </Button>
+                  </Box>
+                </Grid>
               </Grid>
             </Box>
           </Grid>

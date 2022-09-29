@@ -27,41 +27,36 @@ export const useStyles = makeStyles((theme) => ({
       fontSize: '1.8rem',
     },
   },
-  headerDesc: {
+  HeaderDescription: {
     fontSize: '2rem',
     [theme.breakpoints.down('xs')]: {
       fontSize: '1rem',
       margin: theme.spacing(2, 0),
     },
   },
-  //   decorator.
-  decorator: {
-    display: 'flex',
-    fontWeight: 'bolder',
-    fontFamily: 'roboto',
-    position: 'relative',
-    marginTop: '20px',
-    '&:before': {
-      width: '45px',
-      height: '45px',
-      backgroundColor: Theme.colors.primary,
-      content: '" "',
-      borderRadius: '50%',
-    },
-  },
-  decoratorText: {
-    fontSize: '1rem',
-    lineHeight: '45px',
-    position: 'absolute',
-    left: '20px',
+  navbar: {
+    backgroundColor: Theme.colors.base1,
     color: Theme.colors.base2,
-    [theme.breakpoints.down('xs')]: {
-      fontSize: '1rem',
-    },
   },
-  arrow: {
-    lineHeight: '45px',
-    position: 'absolute',
-    left: '11rem',
+  ToolBar: {
+    display: 'flex',
+    flexFlow: 'row wrap',
+    justifyContent: 'space-between',
+  },
+  navlinks: {
+    color: Theme.colors.base2,
+  },
+  //drewer style
+  drawer: {
+    width: '250px',
+    height: '100vh',
+  },
+  drawerContainer: {
+    width: '250px',
+    height: '100vh',
+    backgroundColor: Theme.colors.primary1,
+  },
+  listItem: {
+    color: Theme.colors.base2,
   },
 }))

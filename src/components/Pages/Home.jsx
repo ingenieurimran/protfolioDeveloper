@@ -1,11 +1,10 @@
 import React from 'react'
-import AboutComponent from '../Body/About/AboutComponent'
-import ContactComponent from '../Body/Contact/ContactComponent'
-import FormText from '../Body/Contact/FormTest'
-import PortFolio from '../Body/Portfolio/PortFolio'
-import FooterComponent from '../Footer/FooterComponent'
-import HeaderComponents from '../Header/HeaderComponents'
 import NavBar from '../Navbar/NavBar'
+import HeaderComponents from '../Header/HeaderComponents'
+import AboutComponent from '../Body/About/AboutComponent'
+import PortFolio from '../Body/Portfolio/PortFolio'
+import ContactComponent from '../Body/Contact/ContactComponent'
+import Footer from '../Footer/FooterComponents'
 
 function Home() {
   return (
@@ -15,8 +14,7 @@ function Home() {
       <AboutComponent />
       <PortFolio />
       <ContactComponent />
-      {/* <FooterComponent /> */}
-      {/* <FormText /> */}
+      <Footer />
     </div>
   )
 }
