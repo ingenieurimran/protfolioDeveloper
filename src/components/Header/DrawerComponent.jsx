@@ -1,6 +1,8 @@
 import React from 'react'
 import {Box, Drawer, ListItem, ListItemText, List} from '@material-ui/core'
 import {useStyles} from '../Styles/HeaderStyles'
+import {ListItemIcon} from '@mui/material'
+import {Link} from 'react-scroll'
 
 export default function DrawerComponent({
   initialState,
@@ -8,6 +10,7 @@ export default function DrawerComponent({
   handleDrawerToogler,
 }) {
   const classes = useStyles()
+
   return (
     <Drawer
       anchor="left"
@@ -18,9 +21,11 @@ export default function DrawerComponent({
       <Box className={classes.drawerContainer}>
         <List style={{paddingTop: '30px'}}>
           {navlinks.map((item, i) => (
-            <ListItem key={i} className={classes.listItem}>
-              <ListItemText>{item.label}</ListItemText>
-            </ListItem>
+            <Link to={item.Id}>
+              <ListItem key={i} className={classes.listItem}>
+                <ListItemText>{item.label}</ListItemText>
+              </ListItem>
+            </Link>
           ))}
         </List>
       </Box>
