@@ -22,8 +22,15 @@ export default function Footer() {
       >
         <ArrowUpwardIcon />
       </IconButton>
-      <Typography variant="body1" component="h4" align="center" color="inherit">
-        Designed and developed with <FavoriteIcon style={{color: 'red'}} /> by
+      <Typography
+        variant="body1"
+        component="h4"
+        align="center"
+        color="inherit"
+        className={classes.FooterSize}
+      >
+        Designed and developed with{' '}
+        <FavoriteIcon style={{color: 'red'}} className={classes.HartSize} /> by
         Imran Ali , All Right Reserved © {date.getFullYear()}
       </Typography>
     </Box>

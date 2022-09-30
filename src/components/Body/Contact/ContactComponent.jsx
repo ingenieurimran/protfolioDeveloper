@@ -1,8 +1,6 @@
 import React from 'react'
 import {Container, Grid, Hidden, Typography} from '@material-ui/core'
 import {useStyles} from '../../Styles/AboutStyles'
-import {useStyles as BodyStyles} from '../../Styles/HeaderStyles'
-import {Theme} from '../../Theme'
 import Divider from '@mui/material/Divider'
 import Images from '../../../assets/Images/contact.png'
 import Box from '@mui/material/Box'
@@ -12,7 +10,6 @@ import {useStylesCommon} from '../../CommonFolder/CommonStyles'
 
 function ContactComponent() {
   const classes = useStyles()
-  const classes1 = BodyStyles()
   const classesCommon = useStylesCommon()
 
   const [value, setValue] = React.useState()
@@ -67,30 +64,8 @@ function ContactComponent() {
             </Box>
             {/* Form */}
             <Box
+              className={classesCommon.FormResponsive}
               component="form"
-              sx={{
-                '& .MuiTextField-root': {
-                  m: 1,
-                  width: '45ch',
-                },
-                '& label.Mui-focused': {
-                  color: 'white',
-                },
-                '& .MuiInput-underline:after': {
-                  borderBottomColor: 'yellow',
-                },
-                '& .MuiOutlinedInput-root': {
-                  '& fieldset': {
-                    borderColor: 'white',
-                  },
-                  '&:hover fieldset': {
-                    borderColor: 'white',
-                  },
-                  '&.Mui-focused fieldset': {
-                    borderColor: 'yellow',
-                  },
-                },
-              }}
               noValidate
               autoComplete="off"
             >
@@ -101,7 +76,7 @@ function ContactComponent() {
                 justifyContent="center"
                 alignItems="center"
               >
-                <Grid item xs={12} sm={10}>
+                <Grid>
                   <TextField
                     inputProps={{
                       style: {

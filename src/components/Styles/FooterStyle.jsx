@@ -15,4 +15,16 @@ export const useStylesFooter = makeStyles((theme) => ({
     backgroundColor: Theme.colors.primary,
     color: Theme.colors.base2,
   },
+  FooterSize: {
+    fontSize: '1rem',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '0.8rem',
+    },
+  },
+  HartSize: {
+    fontSize: '1.5rem',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1rem',
+    },
+  },
 }))

@@ -61,4 +61,35 @@ export const useStylesCommon = makeStyles((theme) => ({
     width: '100%',
     height: 'auto',
   },
+  FormResponsive: {
+    '& .MuiTextField-root': {
+      margin: '0.5rem',
+      width: '45ch',
+    },
+    '& label.Mui-focused': {
+      color: 'white',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: 'yellow',
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'white',
+      },
+      '&:hover fieldset': {
+        borderColor: 'white',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'yellow',
+      },
+    },
+    [theme.breakpoints.down('xs')]: {
+      '& .MuiTextField-root': {
+        width: '25ch',
+      },
+    },
+  },
+  body: {
+    margin: '0',
+  },
 }))
